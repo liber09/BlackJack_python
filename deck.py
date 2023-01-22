@@ -1,7 +1,7 @@
 
 from typing import List
 
-from cards_base.card import Card, CardSuit, CardValue
+from card import Card, CardSuit, CardValue
 
 
 print(__name__)

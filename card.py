@@ -37,7 +37,3 @@ class Card:
     def __init__(self, value, suit):
         self.value = value
         self.suit = suit
-
-    #Print card suit and value
-    def __str__(self):
-        return f"{self.suit.value} {self.value.value}"
