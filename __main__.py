@@ -1,7 +1,10 @@
+import gameplay
 from deck import Deck
 
+
 def main():
-    deck = Deck()
+    gameplay.init_game()
+    #deck = Deck()
     #while len(deck.cards) > 0:
     #    card = deck.pull_card()
     #    print(card)

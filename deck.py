@@ -1,4 +1,5 @@
 
+import random
 from typing import List
 
 from card import Card, CardSuit, CardValue
@@ -20,4 +21,4 @@ class Deck:
 
     #get a card from the deck
     def pull_card(self):
-        return self.cards.pop()
+        return random.choice(self.cards)

@@ -14,20 +14,25 @@ def init_game():
     while len(player_cards) < 2:
  
     # Randomly dealing a card
-        player_card = random.choice(deck)
+        player_card = deck.pull_card()
         player_cards.append(player_card)
-        deck.remove(player_card)
+        deck.cards.remove(player_card)
     
         # Updating the player score
-        player_score += player_card.card_value
+        player_score += player_card.numeric_value
     
-        # In case both the cards are Ace, make the first ace value as 1 
+        #Check if both players first card are aces, in that case reduce value
+        #of first to 1 and reduce player score by ten.
         if len(player_cards) == 2:
-            if player_cards[0].card_value == 11 and player_cards[1].card_value == 11:
-                player_cards[0].card_value = 1
+            if player_cards[0].numeric_value == 11 and player_cards[1].numeric_value == 11:
+                player_cards[0].numeric_value = 1
                 player_score -= 10
 
-    clear()
+        print("PLAYER CARDS: ")
+        for card in player_cards:
+            card.print()
+
+    #clear()
 
 # Clear the terminal
 def clear():
